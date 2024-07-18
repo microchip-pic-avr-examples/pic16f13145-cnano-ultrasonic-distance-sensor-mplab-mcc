@@ -4,8 +4,8 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc",
-        "version": " ",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "Zero-Software Ultrasonic Distance Sensing — Use Case for Configurable Logic Block (CLB) Using the PIC16F13145 Microcontroller with MCC Melody",
         "projectName": "pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc",
         "shortDescription": "This code example demonstrates how to get results from the HC-SR04 with zero software written by the user. This is done using the pic16f13145, with the CLB and MCC.\r\n\r\n",
         "ide": {
@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "PIC16F1xxxx_DFP",
+            "semverRange": "^1.25.389"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=5.5.1"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -36,9 +36,13 @@
                 "versionRange": "*"
             }
         },
-        "author": "Prasad Aradhya",
-        "peripherals": [],
-        "keywords": [],
+        "author": "Dylan Turner",
+        "peripherals": [
+            "CLB","TMR0","TMR2", "PWM"
+        ],
+        "keywords": [
+            "LED", "Sensor"
+        ],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
