@@ -101,7 +101,7 @@ You can attach the LEDs to any I/O but the pins used in this example are
   -  CLKOUT function disabled
   -  Interal analog systems are calibrated for operation between VDD = 2.3 - 5.5V
 
- <br><img src="images/CONFIG1.png" width="500"/>
+<br><img src="images/CONFIG1.png" width="500"/>
 
 - TMR2
   - Clock Source: FOSC/4
@@ -109,20 +109,21 @@ You can attach the LEDs to any I/O but the pins used in this example are
   - Postscalar: 1:16
   - Time Period (s): 0.9
  
- <br><img src="images/TMR2.png" width="500"/>
+<br><img src="images/TMR2.png" width="500"/>
 
 - PWM1
   - Timer Dependency Selector: Timer2
   - Duty Cycle (%): 10
     
- <br><img src="images/PWM1.png" width="500"/>
+<br><img src="images/PWM1.png" width="500"/>
 
 - TMR0
   - Timer Mode: 8-bit
   - Clock Prescaler: 1:128
   - Clock Source: HFINTOSC 
   - Requested Period (s): 0.000584 
- <br><img src="images/TMR0.png" width="500"/>
+
+<br><img src="images/TMR0.png" width="500"/>
 
 - NVM
   - Auto-Configured by CLB
@@ -133,7 +134,7 @@ You can attach the LEDs to any I/O but the pins used in this example are
 - CLB
   -  Clock Selection: TMR0_Overflow
 
-  <br><img src="images/CLB1.png" width="500"/>
+<br><img src="images/CLB1.png" width="500"/>
 
 - Pin Grid View
   - CLBPPSOUT0: RC6 (Closest Indicating LED)
