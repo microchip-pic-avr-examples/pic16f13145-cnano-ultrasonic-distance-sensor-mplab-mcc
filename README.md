@@ -10,13 +10,13 @@
 
 # Zero-Software Ultrasonic Distance Sensing — Use Case for Configurable Logic Block (CLB) Using the PIC16F13145 Microcontroller with MCC Melody
 
-This repository provides one projects that implement a rangefinder using the HC-SR04, and displaying the results on a eight LED's.
+This repository creates a rangefinder using the HC-SR04 ultrasonic sensor and displays the results on a bar-graph of eight LED's.
 
-The CLB peripheral is a collection of logic elements that can be programmed to perform a variety of digital logic functions. The logic function may be completely combinatorial, sequential or a combination of the two, enabling users to incorporate hardware-based custom logic into their applications. 
+The CLB peripheral is a collection of logic elements that can be configured to implement discrete logic function(s). The logic function may be completely combinatorial, sequential or a combination of the two, enabling users to incorporate hardware-based custom logic into their applications. 
 
-The HC-SR04 is a standard ultrasonic sensor that can be used for object detection and distance sensing. This is accomplished by the transmitter sending a signal, and making a calculation based off the time it took the signal to get back to the reciever. 
+The HC-SR04 is a standard ultrasonic sensor that can be used for object detection and distance sensing. This is accomplished by the transmitter sending a signal, and then calculating distance based on the time it took the signal to get back to the receiver. 
 
-The CLB will act as a logic handler, interpreting the HC-SR04 sensor data, and displaying it on eight LEDs.
+In this example, the CLB interprets the HC-SR04 sensor data and displaying it on eight LEDs. This removes the need for the user to write any executable code. 
 
 ## Related Documentation
 
@@ -34,7 +34,7 @@ More details and code examples on the PIC16F13145 can be found at the following 
 
 ## Hardware Used
 
-- The [PIC16F13145 Curiosity Nano Development board](https://www.microchip.com/en-us/development-tool/EV06M52A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-quadrature-decoder-up-down-mplab-mcc&utm_bu=MCU08) is used as a test platform: <br><img src="images/pic16f13145-cnano.png" width="600">
+- The [PIC16F13145 Curiosity Nano Development Board (EV06M52A)](https://www.microchip.com/en-us/development-tool/EV06M52A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-quadrature-decoder-up-down-mplab-mcc&utm_bu=MCU08) is used as a test platform: <br><img src="images/pic16f13145-cnano.png" width="600">
 - The HC-SR04 Ultrasonic distance sensor:<br><img src="images/HCSR04.png" width="200">
 - Seven LEDs
 - 7 Resistors for LEDs (rec. 2.2kΩ)
@@ -53,14 +53,14 @@ This demonstration, shows the PIC16F13145 using a CLB configuration using logic 
 
 These demonstrations show the CLB is a highly configurable and open ended tool.
 
-## Concept
+## Theory of Operation
 ![Concept](./images/HC-SR04.png) 
 
-The HC-SR04 Sensor works by sending a series of pulses after the trigger pin has been toggled. These pulses will travel until they reach an object, and reflect back to the sensor if within range. This transaction is measured proportionally on the Echo pin, the pin will remain high if a signal is never received back. This means that the CLB can monitor the HC-SR04 by watching the echo pin.
+The HC-SR04 Sensor works by sending a series of pulses after the trigger pin has been toggled. These pulses will travel until they reach an object, and reflect back to the source. If the object is too far away, the sensor will not properly receive the pulse. The distance traveled is based on the length of time the Echo pin is kept high. By measuring the pulse width of the Echo pin, the CLB can determine the distance to the object.
 
 ![Concept Logic](./images/CLB_LOGIC.png) 
 
-Using the timer 0 overflow and the internal CLB counter we can use the echo line to sort itself out into bins that will be displayed on `COUNT_IS_X`
+To measure the pulse width, the Timer 0 overflow and the internal CLB counter determine which bin the distance falls into.
 
 ## Hardware Setup
 
@@ -70,7 +70,7 @@ Using the timer 0 overflow and the internal CLB counter we can use the echo line
 
 You can attach the LEDs to any I/O but the pins used in this example are 
 | PIN | LED # |
-|--|--|
+|---|---|
 |RC6|1|
 |RC7|2|
 |RB7|3|
@@ -80,12 +80,12 @@ You can attach the LEDs to any I/O but the pins used in this example are
 |RA4|7|
 |RA5|8|
 
-2. The HC-SR04 is connected to the Nano Board via 4 pins
+2. The HC-SR04 is connected to the Curiosity Nano via 4 pins.
 
 <br><img src="images/HCSR04.png" width="200">
 
 | Nano Pin | HC-SR04 Pin |
-|--|--|
+|---|---|
 |VTG|V<sub>CC</sub>|
 |RB6|Trig|
 |RB4|Echo|
