@@ -69,8 +69,9 @@ To measure the pulse width, the Timer 0 overflow and the internal CLB counter de
 ![LED Circuit](./images/LED_circuit.png)
 
 You can attach the LEDs to any I/O but the pins used in this example are 
+
 | PIN | LED # |
-|---|---|
+|--|--|
 |RC6|1|
 |RC7|2|
 |RB7|3|
@@ -85,7 +86,7 @@ You can attach the LEDs to any I/O but the pins used in this example are
 <br><img src="images/HCSR04.png" width="200">
 
 | Nano Pin | HC-SR04 Pin |
-|---|---|
+|--|--|
 |VTG|V<sub>CC</sub>|
 |RB6|Trig|
 |RB4|Echo|
