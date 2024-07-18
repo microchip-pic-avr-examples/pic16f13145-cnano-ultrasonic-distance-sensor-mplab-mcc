@@ -7,7 +7,7 @@
         "version": "1.0.0",
         "displayName": "Zero-Software Ultrasonic Distance Sensing — Use Case for Configurable Logic Block (CLB) Using the PIC16F13145 Microcontroller with MCC Melody",
         "projectName": "pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc",
-        "shortDescription": "This code example demonstrates how to get results from the HC-SR04 with zero software written by the user. This is done using the pic16f13145, with the CLB and MCC.\r\n\r\n",
+        "shortDescription": "This code example demonstrates how to get results from the HC-SR04 with zero software written by the user. This is done using the pic16f13145, with the CLB and MCC.",
         "ide": {
             "name": "MPLAB X",
             "semverRange": ">=6.2.0"
