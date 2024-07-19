@@ -170,7 +170,7 @@ For Single LED results the following submodule should be added within a `New Sch
 
 ![CLB_SUB](./images/LED_Single.png)
 
-The final result should look like this 
+The final result should look like this:
 
 ![CLB_MAIN1](./images/Syth_Select.png)
 
