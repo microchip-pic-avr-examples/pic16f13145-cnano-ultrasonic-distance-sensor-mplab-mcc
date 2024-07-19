@@ -195,7 +195,7 @@ assign led10cm = in8;
 endmodule
 ```
 
-The final result should look like this 
+The final result should look like this:
 
 ![CLB_MAIN2](./images/Syth_All.png)
 
