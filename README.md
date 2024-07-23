@@ -161,7 +161,7 @@ The CLB significantly reduces the software overhead associated with implementing
 
 The CLB is a series of Look-up Tables (LUTs), similiar to an FPGA. In the PIC16F13145 family of microcontrollers (MCUs), there are 32 LUTs available. To configure the logic, use the CLB Synthesizer tool inside of  inside of MPLAB Code Configurator (MCC) (or the equivalant [stand-alone online tool](https://logic.microchip.com/clbsynthesizer/)). Logic diagrams are screenshots of the tool. All of the configuration files (`.clb` and `.v`) are included in the example folders. 
 
-There are two configurations of this project: single LED and all LEDs. All previous settings will be the exact same for both examples, the only change being the CLB bitstream. The following instructions are going to be applicable to the MCC CLB synthesizer or the Online Tool as well. 
+There are two configurations of this project: single LED and all LEDs. All previous settings will be the exact same for both examples, the only change being the CLB bit stream. The following instructions are going to be applicable to the MCC CLB synthesizer or the Online Tool as well. 
 
 **Note:** Any changes in the synthesizer will have to be synthesized first, then the files need to be generated in MCC to take effect in hardware.
 
