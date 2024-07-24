@@ -34,8 +34,8 @@ More details and code examples on the PIC16F13145 can be found at the following 
 
 ## Hardware Used
 
-- The [PIC16F13145 Curiosity Nano Development Board (EV06M52A)](https://www.microchip.com/en-us/development-tool/EV06M52A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-quadrature-decoder-up-down-mplab-mcc&utm_bu=MCU08) is used as a test platform: <br><img src="images/pic16f13145-cnano.png" width="600">
-- The HC-SR04 Ultrasonic distance sensor:<br><img src="images/HCSR04.png" width="200">
+- The [PIC16F13145 Curiosity Nano Development Board (EV06M52A)](https://www.microchip.com/en-us/development-tool/EV06M52A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-quadrature-decoder-up-down-mplab-mcc&utm_bu=MCU08) is used as a test platform: <br><img src="images/pic16f13145-cnano.png"/>
+- The HC-SR04 Ultrasonic distance sensor:<br><img src="images/HCSR04.png"/>
 - Eight LEDs
 - Eight Resistors for LEDs (recommended electrical resistance is 2.2 kΩ)
 
@@ -83,7 +83,7 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
 
 2. Connect HC-SR04 to the Curiosity Nano via the four pins indicated in the table below.
 
-<br><img src="images/HCSR04.png" width="200">
+<br><img src="images/HCSR04.png"/>
 
 | Nano Pin | HC-SR04 Pin |
 |--|--|
@@ -102,7 +102,7 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
   -  CLKOUT function disabled
   -  Internal analog systems are calibrated for operation between V<sub>DD</sub> = 2.3 - 5.5V
 
-<br><img src="images/CONFIG1.png" width="500"/>
+<br><img src="images/CONFIG1.png"/>
 
 - TMR2
   - Clock Source: FOSC/4
@@ -110,13 +110,13 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
   - Postscalar: 1:16
   - Time Period (s): 0.9
  
-<br><img src="images/TMR2.png" width="500"/>
+<br><img src="images/TMR2.png"/>
 
 - PWM1
   - Timer Dependency Selector: Timer2
   - Duty Cycle (%): 10
     
-<br><img src="images/PWM1.png" width="500"/>
+<br><img src="images/PWM1.png"/>
 
 - TMR0
   - Timer Mode: 8-bit
@@ -124,7 +124,7 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
   - Clock Source: HFINTOSC 
   - Requested Period (s): 0.000584 
 
-<br><img src="images/TMR0.png" width="500"/>
+<br><img src="images/TMR0.png"/>
 
 - NVM
   - Auto-Configured by CLB
@@ -135,7 +135,7 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
 - CLB
   -  Clock Selection: TMR0_Overflow
 
-<br><img src="images/CLB1.png" width="500"/>
+<br><img src="images/CLB1.png"/>
 
 - Pin Grid View
   - CLBPPSOUT0: RC6 (Closest Indicating LED)
@@ -149,7 +149,7 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
   - CLBIN1PPS: RB4 (Echo Pin for HC-SR04)
   - PWM1OUT: RB6 (Trig Pin for HC-SR04)
  
-<br><img src="images/PINGRID.png" width="500"/>
+<br><img src="images/PINGRID.png"/>
 
 
 
