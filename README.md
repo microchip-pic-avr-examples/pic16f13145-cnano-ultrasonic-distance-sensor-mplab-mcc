@@ -192,13 +192,13 @@ input in1, in2, in3, in4, in5, in6, in7, in8;
 output led10cm, led20cm, led30cm, led40cm, led50cm, led60cm, led70cm, led80cm;
 
 assign led10cm = in1 | in2 | in3 | in4 | in5 | in6 | in7 | in8;
-assign led10cm = in2 | in3 | in4 | in5 | in6 | in7 | in8;
-assign led10cm = in3 | in4 | in5 | in6 | in7 | in8;
-assign led10cm = in4 | in5 | in6 | in7 | in8;
-assign led10cm = in5 | in6 | in7 | in8;
-assign led10cm = in6 | in7 | in8;
-assign led10cm = in7 | in8;
-assign led10cm = in8;
+assign led20cm = in2 | in3 | in4 | in5 | in6 | in7 | in8;
+assign led30cm = in3 | in4 | in5 | in6 | in7 | in8;
+assign led40cm = in4 | in5 | in6 | in7 | in8;
+assign led50cm = in5 | in6 | in7 | in8;
+assign led60cm = in6 | in7 | in8;
+assign led70cm = in7 | in8;
+assign led80cm = in8;
 endmodule
 ```
 
