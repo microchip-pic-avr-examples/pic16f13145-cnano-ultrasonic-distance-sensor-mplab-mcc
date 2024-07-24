@@ -104,6 +104,11 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
 
 <br><img src="images/CONFIG1.png"/>
 
+- Clock Control
+  - Clock Source: LFINTOSC
+
+<br><img src="images/CLKCNTRL.png"/>  
+
 - TMR2
   - Clock Source: FOSC/4
   - Prescalar: 1:128
