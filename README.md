@@ -111,6 +111,7 @@ The LEDs can be attached to any I/O, but the pins used in this example are the f
 
 - TMR2
   - Clock Source: FOSC/4
+  - Enable Clock Sync: Enabled
   - Prescalar: 1:128
   - Postscalar: 1:16
   - Time Period (s): 0.9
