@@ -37,7 +37,7 @@ More details and code examples on the PIC16F13145 can be found at the following 
 ## Hardware Used
 
 - [PIC16F13145 Curiosity Nano Development Board](https://www.microchip.com/en-us/development-tool/EV06M52A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc&utm_bu=MCU08)
-  <br><img src="images/pic16f13145-cnano.png" width="300">
+  <br><img src="images/pic16f13145-cnano.png" width="400">
 
 - [Curiosity Nano Explorer Board](https://www.microchip.com/en-us/development-tool/ev58g97a?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc&utm_bu=MCU08)
   <br><img src="images/curiosity-nano-explorer.png" width="600">
@@ -65,9 +65,9 @@ This project provides two configurations of the CLB: single or all LEDs drive ba
 
 1. Single LED drive configuration:
    - Add the following submodule named `led_select` within a `New Schematic` by clicking on the Documents menu button in the CLB Synthesizer Library user interface.
-   <br><img src="images/mcc_clb_synthesizer3.png" width="800">
+      <br><br><img src="images/mcc_clb_synthesizer3.png" width="800"><br><br>
    - In the `main` module, add the previously created submodule and a `device_counter` from the Modules section. The final design needs to look as below:
-   <br><img src="images/mcc_clb_synthesizer1_v2.png" width="800">
+      <br><br><img src="images/mcc_clb_synthesizer1_v2.png" width="800"><br><br>
 
 2. All LEDs drive configuration:
    - Add the following submodule named `led_all_counts` within a `New Verilog` by clicking on the Documents menu button in the CLB Synthesizer Library user interface.
@@ -86,12 +86,12 @@ This project provides two configurations of the CLB: single or all LEDs drive ba
         assign led80cm = in8;
         endmodule
         ```
-     <br><img src="images/mcc_clb_synthesizer4.png" width="800">
+     <br><img src="images/mcc_clb_synthesizer4.png" width="800"><br><br>
    - In the `main` module, add the previously created submodule and a `device_counter` from the Modules section. The final design needs to look as below:
-     <br><img src="images/mcc_clb_synthesizer2_v2.png" width="800">
+     <br><br><img src="images/mcc_clb_synthesizer2_v2.png" width="800"><br><br>
 
 
-**Note:** Any changes in the CLB Synthesizer Library user interface will have to be synthesized before generating the files needed for programming.
+**Note:** Any changes in the CLB Synthesizer Library user interface will have to be synthesized first before generating the files needed for programming.
 
 ## Setup
 
