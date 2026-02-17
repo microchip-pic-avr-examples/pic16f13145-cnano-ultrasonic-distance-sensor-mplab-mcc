@@ -8,7 +8,7 @@
    </picture>
 </a>
 
-# Zero-Software Ultrasonic Distance Sensing — Use Case for Configurable Logic Block (CLB) Using the PIC16F13145 Microcontroller With MCC Melody
+# Zero-Software Ultrasonic Distance Sensing — Use Case for CLB Using the PIC16F13145 Microcontroller With MCC Melody
 
 This repository creates a rangefinder using the HC-SR04+ ultrasonic sensor and displays the results on the eight LEDs bar-graph featured on the Curiosity Nano Explorer board.
 
