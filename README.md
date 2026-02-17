@@ -12,7 +12,7 @@
 
 This repository creates a rangefinder using the HC-SR04+ ultrasonic sensor and displays the results on the eight LEDs bar-graph featured on the Curiosity Nano Explorer board.
 
-The CLB peripheral is a collection of logic elements that can be configured to implement discrete logic function(s). The logic function may be completely combinatorial, sequential or a combination of the two, enabling users to incorporate hardware-based custom logic into their applications. 
+The Configurable Logic Block (CLB) peripheral is a collection of logic elements that can be configured to implement discrete logic function(s). The logic function may be completely combinatorial, sequential or a combination of the two, enabling users to incorporate hardware-based custom logic into their applications.
 
 The HC-SR04+ is a standard ultrasonic sensor that can be used for object detection and distance sensing. When the transmitter sends a signal, the distance is calculated based on the time it took the signal to get back to the receiver. Unlike the older version, the HC-SR04+ is compatible with both 5V and 3.3V devices.
 
