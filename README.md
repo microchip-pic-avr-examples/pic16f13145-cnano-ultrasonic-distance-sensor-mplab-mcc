@@ -8,13 +8,13 @@
    </picture>
 </a>
 
-# Zero-Software Ultrasonic Distance Sensing — Use Case for Configurable Logic Block (CLB) Using the PIC16F13145 Microcontroller with MCC Melody
+# Zero-Software Ultrasonic Distance Sensing — Use Case for Configurable Logic Block (CLB) Using the PIC16F13145 Microcontroller With MCC Melody
 
-This repository creates a rangefinder using the HC-SR04+ ultrasonic sensor and displays the results on the eight LEDs bar-graph featured on the Curiosity Nano Explorer Board.
+This repository creates a rangefinder using the HC-SR04+ ultrasonic sensor and displays the results on the eight LEDs bar-graph featured on the Curiosity Nano Explorer board.
 
 The CLB peripheral is a collection of logic elements that can be configured to implement discrete logic function(s). The logic function may be completely combinatorial, sequential or a combination of the two, enabling users to incorporate hardware-based custom logic into their applications. 
 
-The HC-SR04+ is a standard ultrasonic sensor that can be used for object detection and distance sensing. This is accomplished by the transmitter sending a signal, and then calculating distance based on the time it took the signal to get back to the receiver. The HC-SR04+, unlike the older version, is compatible with both 5V and 3.3V devices.
+The HC-SR04+ is a standard ultrasonic sensor that can be used for object detection and distance sensing. When the transmitter sends a signal, the distance is calculated based on the time it took the signal to get back to the receiver. Unlike the older version, the HC-SR04+ is compatible with both 5V and 3.3V devices.
 
 In this example, the CLB interprets the HC-SR04+ sensor data and displays it on eight LEDs. This removes the need for the user to write any executable code.
 
@@ -36,10 +36,10 @@ More details and code examples on the PIC16F13145 can be found at the following 
 
 ## Hardware Used
 
-- [PIC16F13145 Curiosity Nano Development Board](https://www.microchip.com/en-us/development-tool/EV06M52A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc&utm_bu=MCU08)
+- [PIC16F13145 Curiosity Nano Development Board (EV06M52A)](https://www.microchip.com/en-us/development-tool/EV06M52A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc&utm_bu=MCU08)
   <br><img src="images/pic16f13145-cnano.png" width="400">
 
-- [Curiosity Nano Explorer Board](https://www.microchip.com/en-us/development-tool/ev58g97a?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc&utm_bu=MCU08)
+- [Curiosity Nano Explorer Board (EV58G97A)](https://www.microchip.com/en-us/development-tool/ev58g97a?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_Apps_PIC16F13145&utm_content=pic16f13145-cnano-ultrasonic-distance-sensor-mplab-mcc&utm_bu=MCU08)
   <br><img src="images/curiosity-nano-explorer.png" width="600">
 
 - HC-SR04+ Ultrasonic Distance Sensor
@@ -51,26 +51,26 @@ To program the Curiosity Nano board with this MPLAB® X project, follow the step
 
 ## Concept
 
-The HC-SR04+ sensor works by sending a series of pulses after the trigger pin has been toggled. These pulses travel until they reach an object, are reflected back to the source. If the object is too far away, the sensor will not properly receive the pulse. The distance traveled is based on the length of time the Echo pin is kept high. By measuring the pulse width of the Echo pin, the CLB can determine the distance to the object.
+The HC-SR04+ sensor works by sending a series of pulses after the trigger pin has been toggled. These pulses travel until they reach an object, then they are reflected back to the source. If the object is too far away, the sensor will not receive the pulse properly. The distance traveled is based on the length of time the Echo pin is kept in a High state. By measuring the pulse width of the Echo pin, the CLB can determine the distance to the object.
 
 <br><img src="images/HC-SR04.png" width="800">
 
-To measure the pulse width, the Timer0 overflow and the internal CLB counter determine which bin the distance falls into.
+To measure the pulse width, the Timer0 (TMR0) overflow and the internal CLB counter determine which bin the distance falls into.
 
 <br><img src="images/CLB_LOGIC.png" width="800">
 
 In the PIC16F13145 family of microcontrollers (MCUs), the CLB consists of a series of 32 Look-up Tables (LUTs), similiar to an FPGA. To configure the logic, use the CLB Synthesizer tool inside the MPLAB Code Configurator (MCC).
 
-This project provides two configurations of the CLB: single or all LEDs drive based on the detected object's distance. To program the Curiosity Nano Board with one design or the other, use the Load Design option from the CLB Synthesizer Library and choose between `ultrasonic_led_select.clb` or `ultrasonic_led_all_counts.clb` files. Alternatively, the designs can be drawn from scratch following the images and instructions below.
+This project provides two configurations of the CLB: single or all LEDs drive based on the detected distance of the object. To program the Curiosity Nano board with one design or the other, use the Load Design option from the CLB Synthesizer Library and choose between the `ultrasonic_led_select.clb` or `ultrasonic_led_all_counts.clb` files. Alternatively, the designs can be drawn from scratch following the images and instructions below.
 
 1. Single LED drive configuration:
-   - Add the following submodule named `led_select` within a `New Schematic` by clicking on the Documents menu button in the CLB Synthesizer Library user interface.
+   - Add the following submodule named `led_select` within a `New Schematic` by clicking the **Documents** menu button in the CLB Synthesizer Library user interface.
       <br><br><img src="images/mcc_clb_synthesizer3.png" width="800"><br><br>
    - In the `main` module, add the previously created submodule and a `device_counter` from the Modules section. The final design needs to look as below:
       <br><br><img src="images/mcc_clb_synthesizer1_v2.png" width="800"><br><br>
 
 2. All LEDs drive configuration:
-   - Add the following submodule named `led_all_counts` within a `New Verilog` by clicking on the Documents menu button in the CLB Synthesizer Library user interface.
+   - Add the following submodule named `led_all_counts` within a `New Verilog` by clicking the **Documents** menu button in the CLB Synthesizer Library user interface.
         ```
         module led_all_counts(in1, in2, in3, in4, in5, in6, in7, in8, led10cm, led20cm, led30cm, led40cm, led50cm, led60cm, led70cm, led80cm);
         input in1, in2, in3, in4, in5, in6, in7, in8;
@@ -175,7 +175,7 @@ This demonstration shows the PIC16F13145 with a CLB configuration using logic ga
 
 ## Summary
 
-The CLB significantly reduces the software overhead associated with implementing this example. Usually, it is up to the software to handle a timer, counter, as well as the I/Os. These tasks involve managing pin placement (in some cases making sure there is an open row), checking the counter and/or timer is reloaded, or bit-masking. With the CLB, all functions associated with this example are handled by the hardware, which leaves the CPU free to do other tasks without interruption. 
+The CLB significantly reduces the software overhead associated with implementing this example. Usually, it is up to the software to handle a timer, counter, as well as the inputs and outputs. These tasks involve managing the pin placement (in some cases making sure there is an open row), checking if the counter and/or timer is reloaded, or bit-masking. With the CLB, all functions associated with this example are handled by the hardware, which leaves the CPU free to do other tasks without interruption.
 
 The examples featured above showcase that the CLB is a highly configurable and open-ended tool.
 
